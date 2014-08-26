@@ -5,7 +5,7 @@ class DeviseSmsActivableAddTo<%= table_name.camelize %> < ActiveRecord::Migratio
       t.string   :sms_confirmation_token, :limit => 5
       t.datetime :confirmation_sms_sent_at
       t.datetime :sms_confirmed_at
-      t.index    :sms_confirmation_token # for sms_activable
+      t.index    :sms_confirmation_token, :unique => true # for sms_activable
     end
   end
   
